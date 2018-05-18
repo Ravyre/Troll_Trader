@@ -1,0 +1,138 @@
+@import "../base/colours";
+@import "../layout/container";
+@import "../utils/mixins";
+
+/*--------------------------------------------------------------
+  Index
+--------------------------------------------------------------*/
+.content {
+  @include vertical-align($justify: center);
+  height: 100vh;
+  text-align: center;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+
+  // &.active {
+  //   position: relative;
+  //   -webkit-transform: translate(0, 100px);
+  //   transform: translate(0, 100px);
+  // }
+}
+.logo {
+  margin: 0 0 5em;
+}
+
+$size: 20vw;
+$colors: (
+  1: $blu-drk,
+  2: $blu-lht
+);
+@each $id, $color in $colors {
+  // ripple__1 should be 20vw x 20vw
+  // ripple__2 should be 15vw x 15vw
+  [class*="__#{$id}"] {
+    @include vertical-align($justify: center);
+    -webkit-animation: popOut 1s linear;
+    animation: popOut 1s linear;
+    background: $color;
+    border-radius: 100%;
+    -webkit-box-shadow: 0 12px 10px rgba($blk, .3);
+    box-shadow: 0 12px 10px rgba($blk, .3);
+    height: $size * 1 - ($id * 2.5);
+    margin: 0 auto;
+    position: relative;
+    width: $size * 1 - ($id * 2.5);
+  }
+}
+
+.troll {
+  margin: 0 auto;
+  max-width: 350px;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.text {
+  .greeting {
+    -webkit-animation: bounceIn 1s linear .5s forwards;
+    animation: bounceIn 1s linear .5s forwards;
+    opacity: 0;
+  }
+  p {
+    -webkit-animation: slideDown 1s linear 1.5s forwards;
+    animation: slideDown 1s linear 1.5s forwards;
+    opacity: 0;
+  }
+  a {
+    -webkit-animation: slideDown 1s ease 2s forwards;
+    animation: slideDown 1s ease 2s forwards;
+    opacity: 0;
+  }
+}
+
+.social {
+  margin: 2em 0 0;
+}
+.social__a {
+  color: $wht;
+  display: inline-block;
+  font-size: 1.5em;
+  height: 2em;
+  margin: 0 1em;
+  position: relative;
+  text-decoration: none;
+  width: 2em;
+}
+
+$icons: amazon, facebook, twitter;
+@each $icon in $icons {
+  .icon-#{$icon} {
+    opacity: 0;
+    position: relative;
+    &:hover {
+      background: $wht;
+      border-radius: 100%;
+      color: $blu-lht;
+      padding: .3em;
+    }
+    &::after {
+      border-radius: 50%;
+      -webkit-box-shadow: 0 0 0 1px $wht;
+      box-shadow: 0 0 0 1px $wht;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      content: "";
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      -webkit-transform: scale(.8);
+      transform: scale(.8);
+      -webkit-transition: opacity .2s, -webkit-transform .2s;
+      transition: opacity .2s, -webkit-transform .2s;
+      transition: transform .2s, opacity .2s;
+      transition: transform .2s, opacity .2s, -webkit-transform .2s;
+      width: 100%;
+    }
+    &:hover::after {
+      opacity: 1;
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3);
+    }
+  }
+}
+.icon-amazon {
+  -webkit-animation: popOut .8s ease 2.3s forwards;
+  animation: popOut .8s ease 2.3s forwards;
+}
+.icon-facebook {
+  -webkit-animation: popOut .8s ease 2.6s forwards;
+  animation: popOut .8s ease 2.6s forwards;
+}
+.icon-twitter {
+  -webkit-animation: popOut .8s ease 2.9s forwards;
+  animation: popOut .8s ease 2.9s forwards;
+}

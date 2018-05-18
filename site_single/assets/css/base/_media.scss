@@ -1,0 +1,41 @@
+@import "../base/colours";
+@import "../utils/mixins";
+
+/*--------------------------------------------------------------
+  Media Queries
+--------------------------------------------------------------*/
+// material.io/devices/
+$smartphone: "only screen and (max-width: 599px)";
+$tablet: "only screen and (min-width: 600px) and (max-width: 1279px)";
+$desktop: "only screen and (min-width: 1280px)";
+
+/*--------------------------------------------------------------
+  Smartphone
+--------------------------------------------------------------*/
+@media #{$smartphone} {
+  .content {
+    display: block;
+    margin-top: 2rem;
+    padding: .5em;
+  }
+  .logo {
+    margin: 1em 0;
+  }
+  .ripple__1, {
+    height: 120px;
+    width: 120px;
+  }
+  .ripple__2 {
+    height: 100px;
+    width: 100px;
+  }
+  .troll {
+    max-width: 150px;
+  }
+  .greeting {
+    font-size: 1.6em;
+  }
+  .btn__troll {
+    margin: .5em auto;
+  }
+} // smartphone

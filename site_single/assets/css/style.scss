@@ -1,0 +1,47 @@
+/*
+Theme Name: The Troll Trader; Coming Soon
+Author: Siobhan Depper
+Author URI: https://shibbled.io/
+Version: 1.1.0
+Description: This theme is made soley and uniquely for TTCombat.
+*/
+
+/*--------------------------------------------------------------
+  Base
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Raleway:100,400,900');
+@import "base/colours";
+@import "base/reset";
+
+/*--------------------------------------------------------------
+  Components
+--------------------------------------------------------------*/
+@import "components/keyframes";
+@import "components/buttons";
+@import "components/consent";
+
+/*--------------------------------------------------------------
+  Layout
+--------------------------------------------------------------*/
+@import "layout/container";
+
+/*--------------------------------------------------------------
+  Pages
+--------------------------------------------------------------*/
+@import "pages/index";
+
+/*--------------------------------------------------------------
+  Vendors
+--------------------------------------------------------------*/
+@import "vendor/normalize/normalize";
+@import "vendor/icomoon/icomoon";
+
+/*--------------------------------------------------------------
+  Utils
+--------------------------------------------------------------*/
+@import "utils/mixins";
+
+/*--------------------------------------------------------------
+  Media Queries
+--------------------------------------------------------------*/
+@import "base/media";
