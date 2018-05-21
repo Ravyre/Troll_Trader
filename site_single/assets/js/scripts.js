@@ -76,11 +76,11 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!options.classList.contains('active')) {
           options.classList.add('active');
         }
-        consent.style.maxHeight = consentHeight;
       } else {
         if (!consent.classList.contains('active')) {
           // consent.classList.add('active');
           consent.style.maxHeight = consentHeight + "px";
+          content.style.top = consentHeight + "px";
         }
       }
 
@@ -115,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // consentToggle();
       // contentToggle();
       consent.style.maxHeight = "0";
+      content.style.top = "35px";
       console.log("banner: hiding");
 
       /* ---------- Tab, do your thing ---------- */
@@ -148,6 +149,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // consentToggle();
       // contentToggle();
       consent.style.maxHeight = "0";
+      content.style.top = "35px";
       console.log("banner: hiding");
 
       /* ---------- Tab, do your thing ---------- */
@@ -163,6 +165,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // consentToggle();
       // contentToggle();
       consent.style.maxHeight = consentHeight + "px";
+      content.style.top = consentHeight + "px";
       console.log("banner: showing");
       optionsToggle();
       console.log("tab: hiding");

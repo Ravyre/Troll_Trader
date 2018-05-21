@@ -7,6 +7,6 @@
 <?php $dir = __DIR__ ?>
 
   <!-- JavaScript -->
-  <script src="<?php $dir ?>assets/js/scripts.min.js"></script>
+  <script src="assets/js/scripts.min.js"></script>
 </body>
 </html>

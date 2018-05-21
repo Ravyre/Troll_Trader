@@ -10,9 +10,12 @@ $height: -300px;
   background: $wht;
   max-height: 0;
   overflow: hidden;
+  position: fixed;
+  top: 0;
   -webkit-transition: max-height 1s;
   transition: max-height 1s;
   width: 100%;
+  z-index: 999;
 
   @include e(container) {
     @include vertical-align($justify: center);
@@ -33,14 +36,17 @@ $height: -300px;
     box-sizing: border-box;
     color: $gry;
     cursor: pointer;
+    display: inline-block;
     left: 3rem;
     padding: .5em .5rem 0;
-    position: fixed;
+    position: -webkit-sticky;
+    position: absolute;
     text-align: center;
     -webkit-transform: translate(0, $height);
     transform: translate(0, $height);
     -webkit-transition: 1s ease;
     transition: 1s ease;
+    z-index: 9999;
 
     &.active {
       -webkit-transform: translate(0, -35px);

@@ -13,14 +13,11 @@
     }
   }
   @if $padding == null {
-    padding: 3rem;
+    padding: 0;
   }
   @if $width == null {
     >* {
       max-width: 1000px;
     }
   }
-  @media only screen and (max-width: 599px) {
-    padding: 1rem;
-  } // media query
 }

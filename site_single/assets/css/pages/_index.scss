@@ -6,17 +6,14 @@
   Index
 --------------------------------------------------------------*/
 .content {
+  @include container;
   @include vertical-align($justify: center);
   height: 100vh;
+  margin: 0 auto;
+  position: relative;
   text-align: center;
   -webkit-transition: 1s ease;
   transition: 1s ease;
-
-  // &.active {
-  //   position: relative;
-  //   -webkit-transform: translate(0, 100px);
-  //   transform: translate(0, 100px);
-  // }
 }
 .logo {
   margin: 0 0 5em;
@@ -66,25 +63,27 @@ $colors: (
   a {
     -webkit-animation: slideDown 1s ease 2s forwards;
     animation: slideDown 1s ease 2s forwards;
+    display: inline-block;
     opacity: 0;
+    width: 200px;
   }
 }
 
 .social {
   margin: 2em 0 0;
-}
-.social__a {
-  color: $wht;
-  display: inline-block;
-  font-size: 1.5em;
-  height: 2em;
-  margin: 0 1em;
-  position: relative;
-  text-decoration: none;
-  width: 2em;
+  @include e(a) {
+    color: $wht;
+    display: inline-block;
+    font-size: 1.5em;
+    height: 2em;
+    margin: 0 1em;
+    position: relative;
+    text-decoration: none;
+    width: 2em;
+  }
 }
 
-$icons: amazon, facebook, twitter;
+$icons: amazon, facebook, twitter, instagram;
 @each $icon in $icons {
   .icon-#{$icon} {
     opacity: 0;
@@ -135,4 +134,8 @@ $icons: amazon, facebook, twitter;
 .icon-twitter {
   -webkit-animation: popOut .8s ease 2.9s forwards;
   animation: popOut .8s ease 2.9s forwards;
+}
+.icon-instagram {
+  -webkit-animation: popOut .8s ease 3.2s forwards;
+  animation: popOut .8s ease 3.2s forwards;
 }

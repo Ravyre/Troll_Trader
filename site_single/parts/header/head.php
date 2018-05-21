@@ -20,9 +20,8 @@
     <meta name="referrer" content="origin-when-crossorigin">
     <?php include $dir . ('/social.php') ?>
     <title>Troll Trader</title>
-    <link rel="shortcut icon" href="<?php $dir ?>favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="<?php $dir ?>manifest.json">
-    <link rel="stylesheet" href="<?php $dir ?>assets/css/style.min.css?v=1.1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="assets/css/style.min.css?v=1.1.0">
   </head>
   <body>
-    <?php include $dir . ('/../consent/consent.php'); ?>

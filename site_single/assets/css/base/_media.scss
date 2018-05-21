@@ -15,7 +15,8 @@ $desktop: "only screen and (min-width: 1280px)";
 @media #{$smartphone} {
   .content {
     display: block;
-    margin-top: 2rem;
+    height: 100%;
+    // margin-top: 0;
     padding: .5em;
   }
   .logo {
@@ -37,5 +38,10 @@ $desktop: "only screen and (min-width: 1280px)";
   }
   .btn__troll {
     margin: .5em auto;
+  }
+  .social {
+    @include e(a) {
+      margin: 0 .5em;
+    }
   }
 } // smartphone
