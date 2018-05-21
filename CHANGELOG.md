@@ -1,3 +1,14 @@
+## 1.1.1 2018-05-21
+
+## Added
+- buttons; cards + instagram
+
+## Changed
+- buttons; text (shop now -> cards)
+- css; layout issues with cookie consent and main content
+
+------------------------------------------------------------
+
 ## 1.1.0 2018-05-18
 
 ## Added
