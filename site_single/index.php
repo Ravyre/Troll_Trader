@@ -4,14 +4,14 @@
  */
 ?>
 
-<?php $dir = __DIR__ ?>
-
-
 <?php
-include $dir . ('/parts/header/head.php');
+// config
+require_once __DIR__ . ('/includes/config.php');
+// header
+include ROOT_PATH . ('includes/header.php');
 ?>
 
-<?php include $dir . ('/../consent/consent.php'); ?>
+<?php include __DIR__ . ('/includes/consent.php'); ?>
 <div id="content" class="content">
   <div>
     <!-- Logo; with ripple animation -->
@@ -44,4 +44,4 @@ include $dir . ('/parts/header/head.php');
 </div>
 
 <!-- Footer -->
-<?php include $dir . ('/../../parts/footer/footer.php') ?>
+<?php include __DIR__ . ('includes/footer.php') ?>

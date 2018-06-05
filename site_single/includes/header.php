@@ -4,13 +4,16 @@
  */
 ?>
 
-<?php $dir = __DIR__ ?>
+<?php
+// config
+require_once __DIR__ . ('/config.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en-gb" prefix="og: http://ogp.me/ns">
   <head>
-    <?php include $dir . ('/../analyticstracking.php'); ?>
-    <?php include $dir . ('/schema.php'); ?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70459575-1"></script>
+    <?php include __DIR__ . ('/schema.php'); ?>
     <!-- meta data -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +21,7 @@
     <meta name="theme-color" content="#0065ad">
     <meta name="description" content="The UK's leading Wargames retailer and eBay's largest worldwide seller of second-hand Warhammer.">
     <meta name="referrer" content="origin-when-crossorigin">
-    <?php include $dir . ('/social.php') ?>
+    <?php include __DIR__ . ('/social.php') ?>
     <title>Troll Trader</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="manifest" href="manifest.json">
