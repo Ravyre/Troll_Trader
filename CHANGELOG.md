@@ -1,3 +1,23 @@
+## 1.2.1 2018-06-19
+
+## Added
+- background blue (added for accessibility)
+- svg icons
+- webp image type (backwards combatilibity with <picture>)
+
+## Changed
+- mixin (vertical align): added display parameter
+- swapped at-import font for inline <link>
+- consent: swapped <span> for <div>
+- header: move google analytics and schema to just about </head>
+- social.php: tidied file
+
+## Removed
+- font icons
+- service worker
+
+------------------------------------------------------------
+
 ## 1.2.0 2018-06-05
 
 ## Added
