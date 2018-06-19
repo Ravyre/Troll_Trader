@@ -1,0 +1,44 @@
+{
+  "name": "Troll Trader",
+  "short_name": "Troll Trader",
+  "description": "The UKs leading wargames retailer and eBays largest worldwide seller of second-hand Warhammer.",
+  "lang": "en-GB",
+  "dir": "ltr",
+  "start_url": "/",
+  "theme_color": "#0065ad",
+  "background_color": "#0065ad",
+  "display": "fullscreen",
+  "icons": [{
+    "src": "/icons/android/icon-72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "/icons/android/icon-96.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "/icons/android/icon-128.png",
+    "sizes": "128x128",
+    "type": "image/png"
+  }, {
+    "src": "/icons/android/icon-144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "/icons/android/icon-152.png",
+    "sizes": "152x152",
+    "type": "image/png"
+  }, {
+    "src": "/icons/android/icon-192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "/icons/android/icon-384.png",
+    "sizes": "384x384",
+    "type": "image/png"
+  }, {
+    "src": "/icons/android/icon-512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}

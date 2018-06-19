@@ -13,10 +13,10 @@
 
 <div id="consent" class="consent">
   <div class="consent__container">
-    <span class="consent__message">
+    <div class="consent__message">
       <p>We use cookies to help us better understand what you're interested in from us and how you use our products and services.</p>
       <p>We do not use cookies to collect personal data for marketing campaigns or to sell to third-parties</p>
-    </span>
+    </div>
     <div class="consent__buttons">
       <a id="decline" class="consent__buttons--decline">No, thank you</a>
       <a id="accept" class="consent__buttons--accept">Allow cookies</a>

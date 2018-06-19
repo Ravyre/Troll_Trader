@@ -11,6 +11,6 @@ require_once __DIR__ . ('/config.php');
 
   <!-- JavaScript -->
   <script src="assets/js/scripts.min.js"></script>
-  <?php include ROOT_PATH . ('includes/serviceworker.php') ?>
+  <?php // include ROOT_PATH . ('includes/serviceworker.php') ?>
 </body>
 </html>

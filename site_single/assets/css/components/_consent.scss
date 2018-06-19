@@ -18,7 +18,7 @@ $height: -300px;
   z-index: 999;
 
   @include e(container) {
-    @include vertical-align($justify: center);
+    @include vertical-align(flex, center);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;

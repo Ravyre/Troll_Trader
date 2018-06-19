@@ -17,6 +17,12 @@
 }
 .logo {
   margin: 0 0 5em;
+  picture {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
 
 $size: 20vw;
@@ -43,10 +49,11 @@ $colors: (
 }
 
 .troll {
-  margin: 0 auto;
-  max-width: 350px;
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  // margin: 0 auto;
+  // max-width: 350px;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  width: 100%;
 }
 
 .text {
@@ -72,14 +79,61 @@ $colors: (
 .social {
   margin: 2em 0 0;
   @include e(a) {
-    color: $wht;
-    display: inline-block;
+    @include vertical-align(inline-flex, center);
     font-size: 1.5em;
     height: 2em;
     margin: 0 1em;
     position: relative;
     text-decoration: none;
     width: 2em;
+    &:hover, &:hover svg {
+      background: $wht;
+      border-radius: 100%;
+      color: $blu-lht;
+      fill: currentColor;
+      // padding: .3em;
+    }
+    &::after {
+      border-radius: 50%;
+      -webkit-box-shadow: 0 0 0 1px $wht;
+      box-shadow: 0 0 0 1px $wht;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      content: "";
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      -webkit-transform: scale(.8);
+      transform: scale(.8);
+      -webkit-transition: opacity .2s, -webkit-transform .2s;
+      transition: opacity .2s, -webkit-transform .2s;
+      transition: transform .2s, opacity .2s;
+      transition: transform .2s, opacity .2s, -webkit-transform .2s;
+      width: 100%;
+    }
+    &:hover::after {
+      opacity: 1;
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3);
+    }
+    svg {
+      color: $wht;
+      fill: currentColor;
+      opacity: 0;
+      -webkit-transition: opacity .2s, -webkit-transform .2s;
+      transition: opacity .2s, -webkit-transform .2s;
+      transition: transform .2s, opacity .2s;
+      transition: transform .2s, opacity .2s, -webkit-transform .2s;
+      width: 25px;
+      &:hover {
+        color: $blu-lht;
+        fill: currentColor;
+      }
+    }
   }
 }
 
@@ -123,19 +177,19 @@ $icons: amazon, facebook, twitter, instagram;
     }
   }
 }
-.icon-amazon {
+.amazon, .icon-amazon {
   -webkit-animation: popOut .8s ease 2.3s forwards;
   animation: popOut .8s ease 2.3s forwards;
 }
-.icon-facebook {
+.facebook, .icon-facebook {
   -webkit-animation: popOut .8s ease 2.6s forwards;
   animation: popOut .8s ease 2.6s forwards;
 }
-.icon-twitter {
+.twitter, .icon-twitter {
   -webkit-animation: popOut .8s ease 2.9s forwards;
   animation: popOut .8s ease 2.9s forwards;
 }
-.icon-instagram {
+.instagram, .icon-instagram {
   -webkit-animation: popOut .8s ease 3.2s forwards;
   animation: popOut .8s ease 3.2s forwards;
 }
